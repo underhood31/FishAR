@@ -1,8 +1,4 @@
 Base path: '/home/manavjeet/Unity/Hub/Editor/2019.4.14f1/Editor/Data', plugins path '/home/manavjeet/Unity/Hub/Editor/2019.4.14f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
-Cmd: compileSnippet
-  api=15 type=0 insize=15536 outsize=13602 kw=_MAIN_LIGHT_SHADOWS _ADDITIONAL_LIGHTS_VERTEX pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileSnippet
-  api=15 type=0 insize=8338 outsize=2060 kw= pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_LIGHTMAP_FULL_HDR ok=1
 
 Quitting shader compiler process
