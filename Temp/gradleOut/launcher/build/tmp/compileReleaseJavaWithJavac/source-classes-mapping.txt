@@ -1,0 +1,2 @@
+com/FourFifths/FishingAR/BuildConfig.java
+ com.FourFifths.FishingAR.BuildConfig

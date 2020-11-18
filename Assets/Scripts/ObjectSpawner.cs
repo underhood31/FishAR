@@ -7,6 +7,7 @@ public class ObjectSpawner : MonoBehaviour
      public GameObject ObjectToSpawn;
      private PlacementIndicator placementIndicator;
      public GameObject placementManager;
+     public GameObject playCanvas;
 
      void Start(){
           placementIndicator=FindObjectOfType<PlacementIndicator>();
@@ -27,6 +28,7 @@ public class ObjectSpawner : MonoBehaviour
         if(Input.touchCount>0 && Input.touches[0].phase==TouchPhase.Began){
             GameObject gameObject=Instantiate(ObjectToSpawn,placementIndicator.transform.position, placementIndicator.transform.rotation);
             Destroy(placementManager);
+            playCanvas.active=true;
        }else{
             StartCoroutine(SpawnStage());
        }
