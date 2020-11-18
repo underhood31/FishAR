@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - HookingScript
     - ObjectSpawner
     - PlacementIndicator
     Unity.RenderPipelines.Core.Runtime.dll:
@@ -34,11 +35,12 @@ ScriptsOnlyBuild:
     Unity.RenderPipelines.Universal.Runtime.dll:
     - UnityEngine.Rendering.Universal.ForwardRendererData
     - UnityEngine.Rendering.Universal.PostProcessData
+    - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
+    - UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
-    - UnityEditor.Graphing.GraphObject
     - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
     Unity.XR.ARCore.Editor.dll:
     - UnityEditor.XR.ARCore.ARCoreSettings
@@ -76,6 +78,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
@@ -100,6 +103,8 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -137,6 +142,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12352}
     - Class: 114
       Script: {instanceID: 12444}
+    - Class: 114
+      Script: {instanceID: 12720}
     - Class: 114
       Script: {instanceID: 12766}
     - Class: 114
@@ -202,14 +209,16 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15842}
     - Class: 114
+      Script: {instanceID: 15878}
+    - Class: 114
       Script: {instanceID: 15964}
     - Class: 114
       Script: {instanceID: 15970}
+    - Class: 114
+      Script: {instanceID: 25896}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
-      Script: {instanceID: 0}
-    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -1132,7 +1141,7 @@ ScriptsOnlyBuild:
     className: SwingArmModel
   - hash:
       serializedVersion: 2
-      Hash: 863ae1d54db43c29be71cd555c396936
+      Hash: ead0b8c88f113ddccb15e0ebfa96d330
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObjectSpawner
@@ -1400,6 +1409,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: baafe85d3a120bdd0418c71379ae7c44
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HookingScript
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity

@@ -8,6 +8,7 @@ public class ObjectSpawner : MonoBehaviour
      private PlacementIndicator placementIndicator;
      public GameObject placementManager;
      public GameObject playCanvas;
+     public GameObject myFishingRod;
 
      void Start(){
           placementIndicator=FindObjectOfType<PlacementIndicator>();
@@ -29,6 +30,7 @@ public class ObjectSpawner : MonoBehaviour
             GameObject gameObject=Instantiate(ObjectToSpawn,placementIndicator.transform.position, placementIndicator.transform.rotation);
             Destroy(placementManager);
             playCanvas.active=true;
+            myFishingRod.active=true;
        }else{
             StartCoroutine(SpawnStage());
        }
