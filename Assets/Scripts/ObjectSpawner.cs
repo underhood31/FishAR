@@ -26,7 +26,7 @@ public class ObjectSpawner : MonoBehaviour
         
         yield return new WaitForSeconds(0.01666f);
 
-        if(Input.touchCount>0 && Input.touches[0].phase==TouchPhase.Began){
+        if(Input.touchCount>0 && Input.touches[0].phase==TouchPhase.Began && placementIndicator.isVisualActive()){
             GameObject gameObject=Instantiate(ObjectToSpawn,placementIndicator.transform.position, placementIndicator.transform.rotation);
             Destroy(placementManager);
             playCanvas.active=true;

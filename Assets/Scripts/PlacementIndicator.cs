@@ -35,4 +35,8 @@ public class PlacementIndicator : MonoBehaviour
         }
     }
 
+    public bool isVisualActive(){
+        return visual.active;
+    }
+
 }

@@ -28,6 +28,20 @@ public class HookingScript : MonoBehaviour
                 message2.text=hit.transform.name;
                 
                 if(hit.transform.tag == "Fish" && canCapture){
+                    if(hit.transform.name=="Fish_Green(Clone)"){
+                        GameVariables.score+=GameVariables.greenFishWeight;
+                    }
+                    else if(hit.transform.name=="Fish_Yellow(Clone)"){
+                        GameVariables.score+=GameVariables.yellowFishWeight;
+                        //TODO
+                    }
+                    else if(hit.transform.name=="Fish_Red(Clone)"){
+                        GameVariables.score+=GameVariables.redFishWeight;
+                        //TODO
+                    }
+                    else{
+                        GameVariables.score+=GameVariables.greenFishWeight;
+                    }
                     canCapture=false;
                     Destroy(hit.transform.gameObject);
                     StartCoroutine(showTimer(hit.distance));

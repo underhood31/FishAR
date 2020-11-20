@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5202609723074252835}
   - component: {fileID: 9195429528424062854}
   - component: {fileID: 6374930098898496332}
+  - component: {fileID: 5281258129575212693}
   m_Layer: 0
   m_Name: Fish_Yellow
   m_TagString: Fish
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4861830781114632857}
   m_LocalRotation: {x: -3.621977e-15, y: 1, z: -0.000000021855694, w: -0.00000016292068}
   m_LocalPosition: {x: -0.79953575, y: -1.6976185, z: -5.414672}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &5281258129575212693
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4861830781114632857}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.38
+  m_Height: 1.33
+  m_Direction: 2
+  m_Center: {x: 3.815146e-23, y: 0.022520646, z: -0.25289094}
