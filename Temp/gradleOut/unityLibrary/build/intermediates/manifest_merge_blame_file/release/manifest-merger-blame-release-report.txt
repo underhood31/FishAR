@@ -113,7 +113,7 @@
 64-->/home/manavjeet/Unity/FishingAR/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:5-101
 65            android:name="unity.build-id"
 65-->/home/manavjeet/Unity/FishingAR/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:16-45
-66            android:value="ccad6f2f-9537-4874-8844-91919a87c49e" />
+66            android:value="d684ce19-f5b0-476e-904d-3d8ea59b9e71" />
 66-->/home/manavjeet/Unity/FishingAR/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:46-98
 67        <meta-data
 67-->/home/manavjeet/Unity/FishingAR/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:17:5-88
