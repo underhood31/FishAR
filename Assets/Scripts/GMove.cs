@@ -35,6 +35,13 @@ public class GMove : MonoBehaviour
     {
         float p_scale = 0.075f; // scale according to fish color 
         transform.localScale += new Vector3(p_scale , p_scale, p_scale);
+        
+        if(transform.GetComponent<Collider>()!= null && transform.GetComponent<Collider>().enabled == true){
+            p_collider = transform.GetComponent<Collider>();
+        }else if(transform.GetComponentInChildren<Collider>() != null && transform.GetComponentInChildren<Collider>().enabled == true)
+        {
+            p_collider = transform.GetComponentInChildren<Collider>();
+        }
     }
     // Update is called once per frame
     void Update()
@@ -47,6 +54,8 @@ public class GMove : MonoBehaviour
         {
             RotateNPC(p_waypoint, p_speed);
             transform.position = Vector3.MoveTowards(transform.position, p_waypoint, p_speed * global_speed); // speed change acc to power ups
+            
+            CollidedNPC();
         }
 
         if(transform.position == p_waypoint)
@@ -55,12 +64,24 @@ public class GMove : MonoBehaviour
         }
     }
 
+    Vector3 GetWaypoint(bool isRandom)
+    {
+        if (isRandom)
+        {
+            return p_GManager.RandomPosition();
+        }
+        else
+        {
+            return p_GManager.RandomWaypoint();
+        }
+    }
+    
     bool FindTarget(float start = 1f, float end = 2f) //speed change constraint
     {
         p_waypoint = p_GManager.RandomWaypoint();
         if(p_lastWaypoint == p_waypoint)
         {
-            p_waypoint = p_GManager.RandomWaypoint();
+            p_waypoint = p_GManager.RandomWaypoint(); // call getwaypoint for random values
             return false;
         }
         else
@@ -71,6 +92,23 @@ public class GMove : MonoBehaviour
             return true;
         }
         
+    }
+
+    void CollidedNPC()
+    {
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, transform.forward, out hit, transform.localScale.z))
+        {
+            if(hit.collider == p_collider | hit.collider.tag == "waypoint")
+            {
+                return;
+            }
+            int randomNum = Random.Range(1, 100);
+            if (randomNum < 50)
+                p_hasTarget = false;
+
+            Debug.Log(hit.collider.transform.parent.name + " " + hit.collider.transform.parent.position);
+        }
     }
 
     void RotateNPC(Vector3 waypoint, float curSpeed)
